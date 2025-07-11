@@ -1,0 +1,41 @@
+{
+  "expo": {
+    "name": "echobinwalmart",
+    "slug": "echobinwalmart",
+    "version": "1.0.0",
+    "orientation": "portrait",
+    "icon": "./icon.png",
+    "scheme": "echobinwalmart",
+    "userInterfaceStyle": "automatic",
+    "newArchEnabled": true,
+    "ios": {
+      "supportsTablet": true
+    },
+    "android": {
+      "adaptiveIcon": {
+        "foregroundImage": "./icon.png",
+        "backgroundColor": "#ffffff"
+      },
+      "edgeToEdgeEnabled": true,
+      "package": "com.swastikkkkk.echobinwalmart"
+    },
+    "web": {
+      "output": "static",
+      "bundler": "metro",
+      "favicon": "./icon.png"
+    },
+    "plugins": [
+      [
+        "expo-splash-screen",
+        {
+          "image": "./assets/images/splash-icon.png",
+          "imageWidth": 200,
+          "resizeMode": "contain",
+          "backgroundColor": "#ffffff"
+        }
+      ],
+      "expo-font",
+      "expo-router"
+    ]
+  }
+}
