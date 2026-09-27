@@ -1,50 +1,24 @@
-# Welcome to your Expo app 👋
+# EchoBin
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+Returns processing app for retail store teams, built for a Walmart hackathon. Admins see where returns are piling up, workers get assigned returns with drop locations, and every item is tagged over NFC so each item can be tracked to where it needs to go.
 
-## Get started
+## Features
 
-1. Install dependencies
+- **Role-based access.** Admins get full system access and management. Workers get task management and operations.
+- **Returns dashboard.** Overview of recent returns with quick filters (new, defective), search and AI insights on return patterns.
+- **Task list.** Each worker sees assigned returns with item ID, current location and where to drop it, and moves them to completed.
+- **NFC processing.** Scan a return and write its item and task details to an NFC tag in one step.
+- **Reports.** Totals for returns, defective items and new items, with charts.
 
-   ```bash
-   npm install
-   ```
+## Stack
 
-2. Start the app
+React Native (Expo, Expo Router), TypeScript, Firebase Auth and Firestore, react-native-chart-kit, Reanimated.
 
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
+## Run it
 
 ```bash
-npm run reset-project
+npm install
+npx expo start
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+Point `hooks/firebaseConfig.ts` at your own Firebase project before signing in. NFC writing needs a physical device.
